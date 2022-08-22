@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { client } from '../../client'
+import Loader from '../Loader/Loader'
 import HomepageBannerItem from './HomepageBannerItem'
 
 const HomepageBanner = () => {
@@ -41,8 +42,13 @@ const HomepageBanner = () => {
         getHomepageBannerItems()
     }, [getHomepageBannerItems])
 
+    if (isHomepageBannerLoading) {
+        return <Loader />
+    }
 
-    console.log(homepageBannerItems)
+    if (!Array.isArray(homepageBannerItems) || !homepageBannerItems.length) {
+        return null;
+    }
 
     return (
         <div>
