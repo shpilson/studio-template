@@ -6,14 +6,17 @@
     box-sizing: border-box;
 }
 
-* { scroll-behavior: smooth; }
+* {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     padding: 0;
     color: $textColor;
+    background-color: $backgroundColor;
     font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     -webkit-font-smoothing: antiliased;
     -moz-osx-font-smoothing: grayscale;
 }

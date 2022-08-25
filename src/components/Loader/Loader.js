@@ -2,21 +2,9 @@ import React from 'react'
 
 const Loader = () => {
     return (
-        <div class="loaderWrap">
-            <div class="ldio-tuofjt9xb0a">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div></div>
+        <div class="wrapper">
+            <div class="dot"></div>
+        </div>
     )
 }
 
