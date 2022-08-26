@@ -21,7 +21,7 @@ const HomepageBannerItem = (props) => {
                     </svg>
 
                     <button id="gooey-button">
-                        Заказать разработку
+                        Зaказать разработку
                         <span class="bubbles">
                             <span class="bubble"></span>
                             <span class="bubble"></span>
