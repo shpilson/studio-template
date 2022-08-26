@@ -1,10 +1,13 @@
+.container {
+    width: $containerWidth;
+    margin: 0 auto;
+}
+
 .slideWrap {
     min-height: 100vh;
     width: 100%;
     display: flex;
-    padding: 80px;
-    align-items: center;
-    justify-content: center;
+    padding-top: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -21,15 +24,17 @@
 }
 
 .textWrap {
-    max-width: 900px;
-    text-align: center;
+    max-width: 840px;
 
     h2 {
-        font-size: 4.5em;
-        line-height: 1.1;
+        padding-bottom: 30px;
         color: $white;
         margin-bottom: 10px;
-        text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+
+        font-weight: 700;
+        font-size: 4em;
+        line-height: 78px;
+        font-variant: small-caps;
 
         @media (max-width: $breakPoint) {
             font-size: 2.5em;
@@ -37,29 +42,96 @@
     }
 
     p {
-        font-size: 1em;
-        color: #fff;
+        padding-bottom: 40px;
+        color: $white;
+        font-style: normal;
+        max-width: 628px;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 24px;
+    }
+}
+
+.line {
+    margin-bottom: 40px;
+    width: 200px;
+    height: 10px;
+    background: linear-gradient(90deg, #008ebb 0%, #00c2ff 100%);
+}
+
+//
+$prime: #01c1fe;
+$second: #fff;
+
+button {
+    margin-top: 40px;
+}
+
+svg {
+    position: absolute;
+    top: -4000px;
+    left: -4000px;
+}
+#gooey-button {
+    padding: 1.7rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    color: $second;
+    filter: url("#gooey");
+    position: relative;
+    background-color: $prime;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: none;
     }
 
-    .btn {
-        font-size: 1em;
-        color: #fff;
-        background-color: $primaryColor;
-        display: inline-block;
-        padding: 10px 30px;
-        margin-top: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+    &:hover {
+        cursor: pointer;
+        color: #eafaff;
+    }
 
-        &:hover {
-            letter-spacing: 4px;
+    .bubbles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        .bubble {
+            background-color: $prime;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1;
+
+            @for $bubble from 1 through 10 {
+                &:nth-child(#{$bubble}) {
+                    $size: 25px;
+                    left: (random(90) + 10) + px;
+                    width: $size;
+                    height: $size;
+                    animation: move-#{$bubble} #{3 + $bubble * 0.02}s infinite;
+                    animation-delay: #{$bubble * 0.2}s;
+                }
+            }
         }
     }
-
-    // > * {
-    //    opacity: 0;
-    //    transform: translateY(-45px);
-    //    transition: all 1s;
-    // }
+}
+@for $bubble from 1 through 10 {
+    @keyframes move-#{$bubble} {
+        0% {
+            transform: translate(0, 0);
+        }
+        99% {
+            transform: translate(0, -(random(80) + 50) + px);
+        }
+        100% {
+            transform: translate(0, 0);
+            opacity: 0;
+        }
+    }
 }
