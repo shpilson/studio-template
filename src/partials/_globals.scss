@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
-
 *,
 *:before,
 *:after {
@@ -12,12 +10,41 @@
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    src: local("Montserrat"), url(./fonts/Montserrat-Light.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    src: local("Montserrat"), url(./fonts/Montserrat-Regular.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    src: local("Montserrat"), url(./fonts/Montserrat-Medium.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    src: local("Montserrat"), url(./fonts/Montserrat-SemiBold.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    src: local("Montserrat"), url(./fonts/Montserrat-Bold.ttf) format("ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
     color: $textColor;
     background-color: $backgroundColor;
-    font-weight: 300;
     font-family: "Montserrat", sans-serif;
     -webkit-font-smoothing: antiliased;
     -moz-osx-font-smoothing: grayscale;
