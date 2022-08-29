@@ -51,7 +51,7 @@ const HomepageBanner = () => {
     }
 
     return (
-        <div>
+        <div className='homepagebanner'>
             {homepageBannerItems.map((item) => {
                 const { id, bannerBg, bannerTitle, bannerDescription } = item
                 return (

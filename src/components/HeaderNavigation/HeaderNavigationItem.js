@@ -6,9 +6,11 @@ const HeaderNavigationItem = (props) => {
         <div className='container'>
             <div className='navbox'>
                 <a href="/">{studioName}</a>
-                <p>{studioPhone}</p>
+                <div className="phone">
+                    <span className={studioPhone}></span>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 
