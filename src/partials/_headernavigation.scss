@@ -29,8 +29,60 @@
     text-decoration: none;
 }
 
+.navbox-item {
+    display: flex;
+    align-items: center;
+}
+
 .phone {
     background-image: url("../../src/partials/images/phone.svg");
     width: 24px;
     height: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    background-image: url("../../src/partials/images/hamburger.svg");
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.crossline {
+    width: 50px;
+    height: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: rotate(90deg);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    position: relative;
+    outline: none;
+}
+
+select:after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.language {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    font-variant: small-caps;
+    color: #ffffff;
+    background-color: $backgroundColor;
+    border: none;
 }
