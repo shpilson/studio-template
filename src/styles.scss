@@ -1,6 +1,9 @@
 @import "./partials/variables";
 @import "./partials/globals";
 
+@import "./partials/loader";
+
 /* COMPONENTS */
 @import "./partials/homepagebanner";
-@import "./partials/loader";
+@import "./partials/headernavigation";
+@import "./partials/button";
