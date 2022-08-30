@@ -9,7 +9,7 @@ const HeaderNavigationItem = (props) => {
 
                 <div className='navbox-item'>
                     <div className='phone'>
-                        <span className={studioPhone}></span>
+                        <a className='phone' href='https://t.me/imkowalenko'><span className={studioPhone}></span></a>
                     </div>
 
                     <div className='crossline'></div>
