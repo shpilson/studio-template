@@ -1,6 +1,5 @@
 /* The navigation bar */
 .navbar {
-    overflow: hidden;
     height: 150px;
     background: #1a1a1a;
     box-shadow: 0px 0px 5px rgba(10, 10, 10, 0.5);
@@ -9,6 +8,8 @@
     width: 100%; /* Full width */
     display: flex;
     align-items: center;
+
+    z-index: 3;
 }
 
 .navbox {

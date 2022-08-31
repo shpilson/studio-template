@@ -10,6 +10,12 @@
     scroll-behavior: smooth;
 }
 
+.layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 @font-face {
     font-family: "Montserrat";
     src: local("Montserrat"), url(./fonts/Montserrat-Regular.ttf) format("truetype");
@@ -49,10 +55,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-section {
-    padding: 100px;
-
-    @media (max-width: $breakPoint) {
-        padding: 50px 20px;
-    }
+.container {
+    width: $containerWidth;
+    margin: 0 auto;
 }
