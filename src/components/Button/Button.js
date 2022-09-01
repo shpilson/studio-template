@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Button = () => {
+const Button = (props) => {
+    const { buttonTitle } = props
     return (
         <a href="/">
-            <button class="bn632-hover bn26">Заказать разработку</button>
+            <button class="bn632-hover bn26">{buttonTitle}</button>
         </a>
     )
 }

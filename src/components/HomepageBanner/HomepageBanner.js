@@ -14,7 +14,8 @@ const HomepageBanner = () => {
             const bannerTitle = fields.title
             const bannerDescription = fields.description
             const bannerBg = fields.image.fields.file.url
-            const updatedBanner = { id, bannerTitle, bannerDescription, bannerBg }
+            const buttonTitle = fields.cta
+            const updatedBanner = { id, bannerTitle, bannerDescription, bannerBg, buttonTitle }
             return updatedBanner
         })
 
@@ -53,13 +54,14 @@ const HomepageBanner = () => {
     return (
         <div className='homepagebanner'>
             {homepageBannerItems.map((item) => {
-                const { id, bannerBg, bannerTitle, bannerDescription } = item
+                const { id, bannerBg, bannerTitle, bannerDescription, buttonTitle } = item
                 return (
                     <HomepageBannerItem
                         key={id}
                         bannerTitle={bannerTitle}
                         bannerDescription={bannerDescription}
-                        bannerBg={bannerBg} />
+                        bannerBg={bannerBg}
+                        buttonTitle={buttonTitle} />
                 )
             })}
         </div>

@@ -16,6 +16,9 @@
     text-transform: uppercase;
 
     color: $white;
+
+    background: url("../../src/partials/images/rectangle.svg") no-repeat;
+    background-position: left;
 }
 
 .products__description {

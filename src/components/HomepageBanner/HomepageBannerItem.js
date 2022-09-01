@@ -3,7 +3,7 @@ import Button from '../Button/Button'
 
 
 const HomepageBannerItem = (props) => {
-    const { bannerTitle, bannerDescription, bannerBg } = props
+    const { bannerTitle, bannerDescription, bannerBg, buttonTitle } = props
     return (
         <div className='slideWrap'
             style={{ backgroundImage: `url(${bannerBg})` }}>
@@ -13,7 +13,7 @@ const HomepageBannerItem = (props) => {
                     <div className='line'></div>
                     <p>{bannerDescription}</p>
 
-                    <Button />
+                    <Button buttonTitle={buttonTitle} />
                 </div>
             </div>
         </div>

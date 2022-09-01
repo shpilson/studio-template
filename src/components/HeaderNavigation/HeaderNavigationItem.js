@@ -16,8 +16,8 @@ const HeaderNavigationItem = (props) => {
 
 
                     <select className='language'>
-                        <option>RU</option>
                         <option>EN</option>
+                        <option>RU</option>
                     </select>
 
                 </div>
