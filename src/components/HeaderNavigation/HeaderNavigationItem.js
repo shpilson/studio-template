@@ -22,11 +22,43 @@ const HeaderNavigationItem = (props) => {
 
                 </div>
 
-                <div className='menu'>
+                <div className='hamburger-menu'>
+                    <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
+                    <label for="main-navigation-toggle">
+                        <span></span>
+                    </label>
 
+                    <nav id="main-navigation" class="nav-main">
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/development">Development</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/design">Design</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/support">Support</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/portfolio">Portfolio</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/reviews">Reviews</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/brief">Brief</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/contacts">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
