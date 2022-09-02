@@ -1,0 +1,36 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+}
+
+.card-item {
+    width: 320px;
+    height: 460px;
+    background-image: url("../../src/partials/images/card-bg.png");
+    padding: 25px;
+    border-bottom: 2px solid $borderColor;
+}
+
+.card-item:hover {
+    border-bottom: 2px solid $primaryColor;
+}
+
+.card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: $white;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.card-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 70px;
+}
