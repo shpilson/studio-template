@@ -35,7 +35,7 @@ const Products = () => {
             if (response) {
                 cleanUpProducts(response)
             } else {
-                getProducts({})
+                await getProducts({})
             }
             setIsProductsLoading(false)
         } catch (error) {
