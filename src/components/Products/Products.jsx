@@ -12,20 +12,30 @@ const Products = () => {
         const { sys, fields } = rawData
         const { id } = sys
         const productsTitle = fields.title
-        const productstDescription = fields.description
+        const productsDescription = fields.description
 
-        const productsCardIcon = fields.cards[0].fields.icon.fields.file.url
-        const productsCardTitle = fields.cards[0].fields.title
-        const productsCardDescription = fields.cards[0].fields.description
-        const productsCardCTA = fields.cards[0].fields.cta
+        // Cards start
+        const cardsArray = fields.cards
+
+        const newArray = cardsArray.map((arrayItem, arrayItemIndex, wholeArray) =>
+            <div className='cards'>
+                <div className='card-item'>
+                    <img alt='check src' height={64} width={64} />
+                    <p className='card-title'>{arrayItem.fields.title}</p>
+                    <p className='card-description'>{arrayItem.fields.description}</p>
+                    <Button buttonTitle={arrayItem.fields.cta} />
+                </div>
+            </div>
+        );
+
+        // Cards End
+
 
         let cleanProducts = {
-            id, productsTitle, productstDescription,
-            productsCardTitle, productsCardIcon, productsCardDescription, productsCardCTA
+            id, productsTitle, productsDescription, newArray
         }
 
         setProducts(cleanProducts)
-        console.log(rawData)
     }, [])
 
     const getProducts = useCallback(async () => {
@@ -52,25 +62,17 @@ const Products = () => {
         return <Loader />
     }
 
-    const { productsTitle, productstDescription, productsCardTitle,
-        productsCardIcon, productsCardDescription, productsCardCTA } = products
+    const { productsTitle, productsDescription, newArray } = products
 
 
     return (
         <section className='products' id='products'>
             <div className='container'>
                 <h3 className='products__title'>{productsTitle}</h3>
-                <p className='products__description'>{productstDescription}</p>
-                <div className='underline'></div>
+                <p className='products__description'>{productsDescription}</p>
+                <div className='underline' />
 
-                <div className='cards'>
-                    <div className='card-item'>
-                        <img alt={productsCardTitle} height={64} width={64} src={productsCardIcon} />
-                        <p className='card-title'>{productsCardTitle}</p>
-                        <p className='card-description'>{productsCardDescription}</p>
-                        <Button buttonTitle={productsCardCTA} />
-                    </div>
-                </div>
+                {newArray}
             </div>
         </section>
 
