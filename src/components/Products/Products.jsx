@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { client } from '../../client'
+import React, {useState, useEffect, useCallback} from 'react'
+import {client} from '../../client'
 import Button from '../Button/Button';
 import Loader from '../Loader/Loader';
 
@@ -9,30 +9,30 @@ const Products = () => {
     const [isProductsLoading, setIsProductsLoading] = useState(false)
 
     const cleanUpProducts = useCallback((rawData) => {
-        const { sys, fields } = rawData
-        const { id } = sys
+        const {sys, fields} = rawData
+        const {id} = sys
         const productsTitle = fields.title
         const productsDescription = fields.description
 
         // Cards start
         const cardsArray = fields.cards
 
-        const newArray = cardsArray.map((arrayItem, arrayItemIndex, wholeArray) =>
-            <div className='cards'>
-                <div className='card-item'>
-                    <img alt='check src' height={64} width={64} />
-                    <p className='card-title'>{arrayItem.fields.title}</p>
-                    <p className='card-description'>{arrayItem.fields.description}</p>
-                    <Button buttonTitle={arrayItem.fields.cta} />
+        const cardItem = cardsArray.map((arrayItem, arrayItemIndex, wholeArray) =>
+            <div className='card-item'>
+                <div className='card-icon'>
+                    <img alt='icon' height={64} width={64} src={arrayItem.fields.icon.fields.file.url}/>
                 </div>
+                <p className='card-title'>{arrayItem.fields.title}</p>
+                <p className='card-description'>{arrayItem.fields.description}</p>
+                <Button buttonTitle={arrayItem.fields.cta}/>
             </div>
         );
-
+        console.log(cardsArray)
         // Cards End
 
 
         let cleanProducts = {
-            id, productsTitle, productsDescription, newArray
+            id, productsTitle, productsDescription, cardItem
         }
 
         setProducts(cleanProducts)
@@ -59,10 +59,10 @@ const Products = () => {
     }, [getProducts])
 
     if (isProductsLoading) {
-        return <Loader />
+        return <Loader/>
     }
 
-    const { productsTitle, productsDescription, newArray } = products
+    const {productsTitle, productsDescription, cardItem} = products
 
 
     return (
@@ -70,13 +70,12 @@ const Products = () => {
             <div className='container'>
                 <h3 className='products__title'>{productsTitle}</h3>
                 <p className='products__description'>{productsDescription}</p>
-                <div className='underline' />
-
-                {newArray}
+                <div className='underline'/>
+                <div className='cards'>
+                    {cardItem}
+                </div>
             </div>
         </section>
-
-
 
 
     )
