@@ -4,7 +4,7 @@ const Button = (props) => {
     const { buttonTitle } = props
     return (
         <a href="/">
-            <button class="bn632-hover bn26">{buttonTitle}</button>
+            <button className="bn632-hover bn26">{buttonTitle}</button>
         </a>
     )
 }

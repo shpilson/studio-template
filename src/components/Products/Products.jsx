@@ -14,7 +14,7 @@ const Products = () => {
         const productsTitle = fields.title
         const productsDescription = fields.description
 
-        // Cards start
+        // CARDS START
         const cardsArray = fields.cards
 
         const cardItem = cardsArray.map((arrayItem, arrayItemIndex, wholeArray) =>
@@ -27,12 +27,25 @@ const Products = () => {
                 <Button buttonTitle={arrayItem.fields.cta}/>
             </div>
         );
-        console.log(cardsArray)
-        // Cards End
+        // CARDS END
+
+        // LINKS START
+        const linksArray = fields.services
+
+        const linkItem = linksArray.map((item) =>
+            <a href={item.fields.link}>
+                <div className='link-item'>
+                    {item.fields.title}
+                </div>
+            </a>
+        );
+
+        console.log(linksArray)
+        // LINKS END
 
 
         let cleanProducts = {
-            id, productsTitle, productsDescription, cardItem
+            id, productsTitle, productsDescription, cardItem, linkItem
         }
 
         setProducts(cleanProducts)
@@ -62,7 +75,7 @@ const Products = () => {
         return <Loader/>
     }
 
-    const {productsTitle, productsDescription, cardItem} = products
+    const {productsTitle, productsDescription, cardItem, linkItem} = products
 
 
     return (
@@ -73,6 +86,9 @@ const Products = () => {
                 <div className='underline'/>
                 <div className='cards'>
                     {cardItem}
+                </div>
+                <div className='links'>
+                    {linkItem}
                 </div>
             </div>
         </section>

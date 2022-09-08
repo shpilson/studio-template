@@ -1,0 +1,37 @@
+/// Link Buttons
+
+.links {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  max-width: $containerWidth;
+  max-height: border-box;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    padding-bottom: 15px;
+  }
+}
+
+.link-item {
+  width: 320px;
+  height: 60px;
+  padding-top: 20px;
+  padding-left: 15px;
+
+  background: #1D2427 url('../../src/partials/images/arrow.svg') no-repeat;
+  background-position: 95% 50%;
+  border-right: 2px solid $borderColor;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  text-decoration: none;
+
+}
+
+.link-item:hover {
+  border-right: 2px solid $primaryColor;
+}

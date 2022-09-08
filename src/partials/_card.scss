@@ -1,6 +1,7 @@
 .cards {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding-bottom: 30px;
 }
 
@@ -10,11 +11,19 @@
     background-image: url("../../src/partials/images/card-bg.png");
     padding: 25px;
     border-bottom: 2px solid $borderColor;
-    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 
 .card-item:hover {
     border-bottom: 2px solid $primaryColor;
+    transition: 0.7s;
+}
+
+.card-icon {
+
 }
 
 .card-title {
@@ -25,8 +34,6 @@
 
     color: $white;
 
-    padding-top: 20px;
-    padding-bottom: 30px;
 }
 
 .card-description {

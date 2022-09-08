@@ -1,36 +1,52 @@
 .products {
-    position: relative;
+  position: relative;
 }
 
 .products__title {
-    padding-top: 60px;
-    padding-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
 
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 
-    color: $white;
+  color: $white;
 
-    background: url("../../src/partials/images/rectangle.svg") no-repeat;
-    background-position: left;
+  background: url("../../src/partials/images/rectangle.svg") no-repeat;
+  background-position: left;
 }
 
 .products__description {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 
-    color: #ffffff;
+  color: $white;
 }
 
 .underline {
-    width: 64px;
-    border: 2px solid #01bcf7;
-    margin-bottom: 50px;
+  width: 64px;
+  border: 2px solid $primaryColor;
+  margin-bottom: 50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
