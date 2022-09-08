@@ -81,8 +81,8 @@ const Products = () => {
     return (
         <section className='products' id='products'>
             <div className='container'>
-                <h3 className='products__title'>{productsTitle}</h3>
-                <p className='products__description'>{productsDescription}</p>
+                <h3 className='section__title'>{productsTitle}</h3>
+                <p className='section__description'>{productsDescription}</p>
                 <div className='underline'/>
                 <div className='cards'>
                     {cardItem}
