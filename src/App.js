@@ -2,6 +2,7 @@ import HomepageBanner from "./components/HomepageBanner/HomepageBanner";
 import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation";
 import Products from "./components/Products/Products";
 import Benefits from "./components/Benefits/Benefits";
+import CallMeBanner from "./components/CallMeBanner/CallMeBanner";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <HomepageBanner/>
             <Products/>
             <Benefits/>
+            <CallMeBanner/>
         </div>
     );
 }

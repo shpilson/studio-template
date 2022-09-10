@@ -5,7 +5,7 @@ const HeaderNavigationItem = (props) => {
     return (
         <div className='container'>
             <div className='navbox'>
-                <a href="/">{studioName}</a>
+                <a className='logo' href="/">{studioName}</a>
 
                 <div className='navbox-item'>
                     <div className='phone'>

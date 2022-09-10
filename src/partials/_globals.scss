@@ -45,6 +45,11 @@
     src: local("Montserrat"), url(./fonts/Montserrat-Bold.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "Libre Barcode 39 Text";
+    src: local("Libre Barcode 39 Text"), url(./fonts/LibreBarcode39Text-Regular.ttf) format("truetype");
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -58,4 +63,12 @@ body {
 .container {
     width: $containerWidth;
     margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Libre Barcode 39 Text', sans-serif;
+    font-size: 36px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    font-variant:none !important;
 }

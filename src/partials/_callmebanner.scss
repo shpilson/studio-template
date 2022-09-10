@@ -1,0 +1,36 @@
+.callmebanner {
+  background: url('../../src/partials/images/atoms-bg-blue.png') $primaryColor center;
+  width: 100%;
+  height: 300px;
+}
+
+.callmebanner__title {
+  padding-top: 75px;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+.cmb__box {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+
+  input {
+    width: 250px;
+    height: 60px;
+    padding: 20px 15px;
+    margin-right: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $primaryColor;
+    border: none;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: $primaryColor;
+  }
+}
+
