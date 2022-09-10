@@ -17,7 +17,7 @@ const Products = () => {
         // CARDS START
         const cardsArray = fields.cards
 
-        const cardItem = cardsArray.map((arrayItem, arrayItemIndex, wholeArray) =>
+        const cardItem = cardsArray.map((arrayItem) =>
             <div className='card-item'>
                 <div className='card-icon'>
                     <img alt='icon' height={64} width={64} src={arrayItem.fields.icon.fields.file.url}/>
