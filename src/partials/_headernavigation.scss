@@ -380,7 +380,7 @@ select:after {
   .menu__link {
     opacity: 0.25;
     transition-duration: calc(var(--td) * 3);
-    transform: translate(0, calc(var(--pull) * -1));
+
   }
 
   .submenu .menu__link {
