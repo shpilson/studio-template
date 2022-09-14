@@ -3,6 +3,7 @@ import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation";
 import Products from "./components/Products/Products";
 import Benefits from "./components/Benefits/Benefits";
 import CallMeBanner from "./components/CallMeBanner/CallMeBanner";
+import Clients from "./components/Clients/Clients";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Products/>
             <Benefits/>
             <CallMeBanner/>
+            <Clients/>
         </div>
     );
 }

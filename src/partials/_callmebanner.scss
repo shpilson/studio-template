@@ -2,6 +2,7 @@
   background: url('../../src/partials/images/atoms-bg-blue.png') $primaryColor center;
   width: 100%;
   height: 300px;
+  margin-bottom: 50px;
 }
 
 .callmebanner__title {
@@ -36,7 +37,9 @@
   button {
     width: 250px;
     height: 60px;
-    background: #000;
+    background: #000 url('../../src/partials/images/arrow.svg') no-repeat;
+    background-position: 85% 50%;
+
     color: $textColor;
     border: none;
     outline: none;
