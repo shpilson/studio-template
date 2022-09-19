@@ -1,6 +1,12 @@
 import React, {useState, useEffect, useCallback} from "react";
 import {client} from '../../client'
 import Loader from "../Loader/Loader";
+import Button from "../Button/Button";
+
+import {Swiper, SwiperSlide} from "swiper/react"
+
+// Import Swiper styles
+import "swiper/css";
 
 const Clients = () => {
     const [clients, setClients] = useState({})
@@ -12,8 +18,27 @@ const Clients = () => {
 
         const sectionTitle = fields.title
         const sectionDescription = fields.description
+        const buttonCTA = fields.cta
 
-        let cleanClients = {id, sectionTitle, sectionDescription}
+
+        // PROJECT CARD
+
+        const projectsArray = fields.projects
+
+        const projectItem = projectsArray.map((arrayItem) =>
+            <SwiperSlide>
+                <div className='project-card__item'
+                     style={{backgroundImage: `url(${arrayItem.fields.preview.fields.file.url})`}}>
+                    <div className='client-btn'>
+                        <Button buttonTitle={arrayItem.fields.website}/>
+                    </div>
+                </div>
+            </SwiperSlide>
+        );
+
+        // PROJECT CARD END
+
+        let cleanClients = {id, sectionTitle, sectionDescription, buttonCTA, projectItem}
 
         setClients(cleanClients)
     }, [])
@@ -42,7 +67,7 @@ const Clients = () => {
         return <Loader/>
     }
 
-    const {sectionTitle, sectionDescription} = clients
+    const {sectionTitle, sectionDescription, buttonCTA, projectItem} = clients
 
     return (
         <section className='clients'>
@@ -50,6 +75,16 @@ const Clients = () => {
                 <h3 className='section__title'>{sectionTitle}</h3>
                 <p className='section__description'>{sectionDescription}</p>
                 <div className='underline'/>
+                <div className='clients-box'>
+                    <Swiper rewind={true}
+                            slidesPerView={3}>
+                        {projectItem}
+                    </Swiper>
+                </div>
+                <div className='clients-btn'>
+                    <Button buttonTitle={buttonCTA}/>
+                </div>
+
             </div>
         </section>
     )

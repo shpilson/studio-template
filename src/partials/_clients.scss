@@ -1,0 +1,40 @@
+.clients {
+}
+
+.clients-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.clients-btn {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.project-card__item {
+  width: 300px;
+  height: 293px;
+  filter: grayscale(100%);
+  transition: all ease-out 1.5s;
+}
+
+.project-card__item:hover {
+  filter: grayscale(0%);
+
+  .client-btn {
+    display: flex;
+  }
+}
+
+.project-card__title {
+
+}
+
+.client-btn {
+  display: none;
+  justify-content: center;
+  padding-top: 50%;
+}
