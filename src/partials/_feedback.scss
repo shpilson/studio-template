@@ -1,0 +1,36 @@
+.feedback-box {
+  padding-top: 10px
+}
+
+.feedback-item {
+  padding: 25px;
+  width: 490px;
+  height: 250px;
+  background: url('../../src/partials/images/atoms-bg-blue.png') no-repeat;
+
+  .underline {
+    margin: 10px 0;
+  }
+}
+
+.feedback-item__name {
+  font-weight: 700;
+}
+
+.feedback-item__position {
+  font-weight: 400;
+  font-size: 14px;
+  color: #9B9B9B;
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback-column {
+}
+
+.feedback-desc {
+  padding-top: 30px;
+}
