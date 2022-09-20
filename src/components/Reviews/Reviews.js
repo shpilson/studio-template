@@ -1,12 +1,20 @@
 import React, {useState, useEffect, useCallback} from "react";
 import {client} from '../../client'
 import Loader from "../Loader/Loader";
+import Button from "../Button/Button";
 
+// SWIPER
 import {Swiper, SwiperSlide} from "swiper/react"
 
-// Import Swiper styles
+import {Pagination} from "swiper";
+
 import "swiper/css";
-import Button from "../Button/Button";
+import "swiper/css/pagination";
+
+const pagination = {
+    clickable: true
+};
+// END SWIPER
 
 const Reviews = () => {
     const [reviews, setReviews] = useState({})
@@ -33,7 +41,7 @@ const Reviews = () => {
                             <div className='feedback-item__name'>
                                 {arrayItem.fields.name}
                             </div>
-                            <div className='underline' />
+                            <div className='underline'/>
                             <div className='feedback-item__position'>
                                 {arrayItem.fields.position}
                             </div>
@@ -81,19 +89,25 @@ const Reviews = () => {
         return <Loader/>
     }
 
-    const {sectionTitle, sectionDescription, feedback} = reviews
+    const {sectionTitle, sectionDescription, buttonCTA, feedback} = reviews
 
     return (
         <section className='reviews'>
             <div className='container'>
                 <h3 className='section__title'>{sectionTitle}</h3>
                 <p className='section__description'>{sectionDescription}</p>
-                <div className='underline' />
+                <div className='underline'/>
                 <div className='feedback-box'>
-                    <Swiper rewind={true}
+                    <Swiper className='my-swiper'
+                            pagination={pagination}
+                            modules={[Pagination]}
+                            rewind={true}
                             slidesPerView={2}>
                         {feedback}
                     </Swiper>
+                </div>
+                <div className='reviews-btn'>
+                    <Button buttonTitle={buttonCTA}/>
                 </div>
             </div>
 

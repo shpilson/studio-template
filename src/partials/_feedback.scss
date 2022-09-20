@@ -1,5 +1,14 @@
+.reviews {
+}
+
+.reviews-btn {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
 .feedback-box {
-  padding-top: 10px
+  padding-top: 10px;
 }
 
 .feedback-item {
@@ -33,4 +42,24 @@
 
 .feedback-desc {
   padding-top: 30px;
+}
+
+.my-swiper {
+
+  .swiper-pagination-bullet {
+    width: 32px;
+    height: 0px;
+    text-align: center;
+    border: 1px solid #454545;
+    color: #454545;
+    background: #454545;
+    border-radius: 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #01BCF7;
+    background: #01BCF7;
+    border: 1px solid #01BCF7;
+    border-radius: 0;
+  }
 }
