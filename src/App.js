@@ -5,6 +5,7 @@ import Benefits from "./components/Benefits/Benefits";
 import CallMeBanner from "./components/CallMeBanner/CallMeBanner";
 import Clients from "./components/Clients/Clients";
 import Reviews from "./components/Reviews/Reviews";
+import Brief from "./components/Brief/Brief";
 
 function App() {
     return (
@@ -15,7 +16,8 @@ function App() {
             <Benefits/>
             <CallMeBanner/>
             <Clients/>
-            <Reviews />
+            <Reviews/>
+            <Brief/>
         </div>
     );
 }

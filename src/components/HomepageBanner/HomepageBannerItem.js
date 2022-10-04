@@ -10,7 +10,7 @@ const HomepageBannerItem = (props) => {
             <div className='container'>
                 <div className='textWrap'>
                     <h2>{bannerTitle}</h2>
-                    <div className='line'></div>
+                    <div className='line' />
                     <p>{bannerDescription}</p>
 
                     <Button buttonTitle={buttonTitle} />
