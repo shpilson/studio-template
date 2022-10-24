@@ -6,6 +6,7 @@ import CallMeBanner from "./components/CallMeBanner/CallMeBanner";
 import Clients from "./components/Clients/Clients";
 import Reviews from "./components/Reviews/Reviews";
 import Brief from "./components/Brief/Brief";
+import Contacts from "./components/Contacts/Contacts";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <Clients/>
             <Reviews/>
             <Brief/>
+            <Contacts/>
         </div>
     );
 }

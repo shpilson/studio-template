@@ -1,0 +1,100 @@
+.contacts {
+}
+
+.contacts__content {
+  display: flex;
+}
+
+.contacts__info {
+  width: 490px;
+  height: 500px;
+  background-color: $primaryColor;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacts__info-box {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contacts__info-telegram {
+  background: url('../../src/partials/images/telegram.svg') no-repeat;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  padding-left: 47px;
+}
+
+.contacts__info-phone {
+  background: url('../../src/partials/images/whatsapp.svg') no-repeat;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  padding-left: 47px;
+}
+
+.contacts__info-email {
+  background: url('../../src/partials/images/email.svg') no-repeat;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  padding-left: 47px;
+}
+
+.contacts__box {
+  display: flex;
+  flex-direction: column;
+  width: 490px;
+  height: 500px;
+  margin-left: 20px;
+  background: url('../../src/partials/images/atoms-bg-blue.png');
+  padding: 25px;
+}
+
+.contacts__box-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contacts__box-upper-inputs {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.contacts__box-name {
+  width: 200px;
+  height: 40px;
+  background: #E8E9E9;
+  border: none;
+}
+
+.contacts__box-phone {
+  width: 200px;
+  height: 40px;
+  background: #E8E9E9;
+  border: none;
+}
+
+.contacts__box-email {
+  height: 40px;
+  margin-bottom: 30px;
+  background: #E8E9E9;
+  border: none;
+}
+
+.contacts__box-message {
+  height: 150px;
+  background: #E8E9E9;
+  border: none;
+  margin-bottom: 50px;
+}
+
+.contacts__button {
+  margin: 0 0 0 auto;
+}
