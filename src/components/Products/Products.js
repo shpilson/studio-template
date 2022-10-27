@@ -40,7 +40,6 @@ const Products = () => {
             </a>
         );
 
-        console.log(linksArray)
         // LINKS END
 
 

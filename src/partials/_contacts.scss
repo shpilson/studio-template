@@ -1,4 +1,5 @@
 .contacts {
+  margin-bottom: 200px;
 }
 
 .contacts__content {
@@ -72,6 +73,12 @@
   height: 40px;
   background: #E8E9E9;
   border: none;
+  padding-left: 15px;
+  font-family: monospace;
+}
+
+.contacts__box-name:focus {
+  outline: 2px solid $primaryColor;
 }
 
 .contacts__box-phone {
@@ -79,6 +86,12 @@
   height: 40px;
   background: #E8E9E9;
   border: none;
+  padding-left: 15px;
+  font-family: monospace;
+}
+
+.contacts__box-phone:focus {
+  outline: 2px solid $primaryColor;
 }
 
 .contacts__box-email {
@@ -86,6 +99,12 @@
   margin-bottom: 30px;
   background: #E8E9E9;
   border: none;
+  padding-left: 15px;
+  font-family: monospace;
+}
+
+.contacts__box-email:focus {
+  outline: 2px solid $primaryColor;
 }
 
 .contacts__box-message {
@@ -93,6 +112,13 @@
   background: #E8E9E9;
   border: none;
   margin-bottom: 50px;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-family: monospace;
+}
+
+.contacts__box-message:focus {
+  outline: 2px solid $primaryColor;
 }
 
 .contacts__button {

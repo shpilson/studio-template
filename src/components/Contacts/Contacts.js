@@ -90,7 +90,7 @@ const Contacts = () => {
                             <input className='contacts__box-phone' placeholder={boxPhone}/>
                         </div>
                         <input className='contacts__box-email' placeholder={boxEmail}/>
-                        <input className='contacts__box-message' placeholder={boxMessage}/>
+                        <textarea className='contacts__box-message' placeholder={boxMessage}/>
 
                         <div className='contacts__button'>
                             <Button buttonTitle={boxCTA}/>

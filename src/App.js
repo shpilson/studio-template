@@ -7,6 +7,7 @@ import Clients from "./components/Clients/Clients";
 import Reviews from "./components/Reviews/Reviews";
 import Brief from "./components/Brief/Brief";
 import Contacts from "./components/Contacts/Contacts";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
             <Reviews/>
             <Brief/>
             <Contacts/>
+            <Footer/>
         </div>
     );
 }
