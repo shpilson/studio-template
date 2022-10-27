@@ -74,7 +74,7 @@ const Footer = () => {
     }
 
     const {
-        id, studioName, workingYears, phoneTitle, phone, emailTitle,
+        studioName, workingYears, phoneTitle, phone, emailTitle,
         email, socialsTitle, telegram, behance, github, servicesTitle, serviceLink, infoTitle, infoLink
     } = footer
 
