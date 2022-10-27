@@ -26,7 +26,7 @@ const Footer = () => {
         const servicesArray = fields.servicesLinks
         const serviceLink = servicesArray.map((arrayItem) =>
             <div className='service-link'>
-                <a href={arrayItem.fields.link}>{arrayItem.fields.title}</a>
+                <a className='footer__link' href={arrayItem.fields.link}>{arrayItem.fields.title}</a>
             </div>
         );
         // SERVICES LINKS END
@@ -36,7 +36,7 @@ const Footer = () => {
         const infoArray = fields.infoLinks
         const infoLink = infoArray.map((arrayItem) =>
             <div className='info-link'>
-                <a href={arrayItem.fields.link}>{arrayItem.fields.title}</a>
+                <a className='footer__link' href={arrayItem.fields.link}>{arrayItem.fields.title}</a>
             </div>
         );
         // INFO LINKS END
@@ -109,15 +109,15 @@ const Footer = () => {
                                 {socialsTitle}
                             </div>
                             <div className='footer__socials-box-links'>
-                                <div className='footer__social-box-links-telegram'>
-                                    <a href={telegram}>.</a>
-                                </div>
-                                <div className='footer__social-box-links-behance'>
-                                    <a href={behance}>.</a>
-                                </div>
-                                <div className='footer__social-box-links-github'>
-                                    <a href={github}>.</a>
-                                </div>
+                                <a href={telegram} target='_blank' rel="noreferrer">
+                                    <div className='footer__social-box-links-telegram'/>
+                                </a>
+                                <a href={behance} target='_blank' rel="noreferrer">
+                                    <div className='footer__social-box-links-behance'/>
+                                </a>
+                                <a href={github} target='_blank' rel="noreferrer">
+                                    <div className='footer__social-box-links-github'/>
+                                </a>
                             </div>
                         </div>
                     </div>
